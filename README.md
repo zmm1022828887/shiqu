@@ -3,3 +3,7 @@
 
 
 网址： http://www.shiqu.sinaapp.com/index.php
+
+软件环境：yii1.0+bootstrap
+
+功能：页面主要操作知乎，可以提问和发布文章等等.
