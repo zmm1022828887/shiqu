@@ -1,0 +1,35 @@
+body, h3, p, ul, li { margin: 0; padding: 0; }
+body { color: #8B8B8B; background-color: #FFF; font-size: 12px; line-height: 1.5em; font-family: Arial,Tahoma,"hiragino sans gb",Helvetica; }
+h3 { font-size: 100%; }
+li { list-style: none; }
+img { border: 0 none; -ms-interpolation-mode: bicubic; }
+
+a { color: #515151; text-decoration: none; }
+    a:hover { color: #333; }
+
+
+.mod_focus_show { width: 700px; height: 400px; position: relative; overflow: hidden; margin: 0 auto; }
+    .mod_focus_show .mod_focus_pic { display: block; width: 700px; height: 320px; }
+        .mod_focus_show .mod_focus_pic li, .mod_focus_show .mod_focus_pic a, .mod_focus_show .mod_focus_pic img { display: block; width: 700px; height: 320px; }
+        .mod_focus_show .mod_focus_pic li { position: absolute; left: 0; top: 0; }
+    .mod_focus_show .mod_focus_title { position: absolute; z-index: 1; left: 0; bottom: 80px; overflow: hidden; zoom: 1; width: 700px; height: 53px; background-color: rgba(0,0,0,.8); filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#CC000000',endColorstr='#CC000000'); background-image: url(about:blank); }
+:root .mod_focus_title { filter: none; }
+.mod_focus_show .mod_focus_title li { width: 590px; padding: 0 0 0 20px; overflow: hidden; word-break: keep-all; word-wrap: keep-all; white-space: nowrap; table-layout: fixed; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+    .mod_focus_show .mod_focus_title li h3 { line-height: 53px; _line-height: 55px; font-size: 28px; font-family: "Microsoft Yahei",Tahoma,Geneva; font-weight: 500; }
+        .mod_focus_show .mod_focus_title li h3 a { color: #98e404; }
+
+.focus_switch { width: 59px; height: 29px; position: absolute; z-index: 2; right: 15px; bottom: 92px; }
+    .focus_switch a { float: left; width: 29px; height: 29px; background-image: url(../images/icon_focus_switch.png); background-repeat: no-repeat; cursor: pointer; }
+    .focus_switch .icon_prev { background-position: 0 0; margin: 0 1px 0 0; }
+        .focus_switch .icon_prev:hover { background-position: -30px 0; }
+    .focus_switch .icon_next { background-position: -60px 0; }
+        .focus_switch .icon_next:hover { background-position: -90px 0; }
+.mod_focus_show .mod_focus_list { padding: 10px 5px; background: #000; overflow: hidden; height: 60px; }
+    .mod_focus_show .mod_focus_list li { width: 60px; height: 60px; float: left; margin: 0 4px 0 5px; position: relative; *display: inline; }
+        .mod_focus_show .mod_focus_list li a { display: block; width: 60px; height: 60px; }
+        .mod_focus_show .mod_focus_list li img { display: block; width: 60px; height: 60px; }
+        .mod_focus_show .mod_focus_list li a:hover { _background: none; }
+            .mod_focus_show .mod_focus_list li a:hover .mask, .mod_focus_show .mod_focus_list .current .mask { display: none; }
+        .mod_focus_show .mod_focus_list li .mask { display: block; height: 60px; width: 60px; position: relative; top: -60px; margin: 0 0 -60px; eft: 0; bottom: 0; background: #000; opacity: .5; filter: alpha(opacity=50); }
+        .mod_focus_show .mod_focus_list li .border { display: none; }
+    .mod_focus_show .mod_focus_list .current .border { display: block; height: 5px; width: 60px; font-size: 0; overflow: hidden; position: absolute; left: 0; bottom: 0; background: #98e404; }

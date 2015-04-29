@@ -1,0 +1,147 @@
+/*!
+* Colorpicker for Bootstrap
+*
+* Copyright 2012 Stefan Petre
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+*/
+.colorpicker-saturation {
+width: 100px;
+height: 100px;
+background-image: url(../img/saturation.png);
+cursor: crosshair;
+float: left;
+}
+.colorpicker-saturation i {
+display: block;
+height: 5px;
+width: 5px;
+border: 1px solid #000;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+position: absolute;
+top: 0;
+left: 0;
+margin: -4px 0 0 -4px;
+}
+.colorpicker-saturation i b {
+display: block;
+height: 5px;
+width: 5px;
+border: 1px solid #fff;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.colorpicker-hue, .colorpicker-alpha {
+width: 15px;
+height: 100px;
+float: left;
+cursor: row-resize;
+margin-left: 4px;
+margin-bottom: 4px;
+}
+.colorpicker-hue i, .colorpicker-alpha i {
+display: block;
+height: 1px;
+background: #000;
+border-top: 1px solid #fff;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+margin-top: -1px;
+}
+.colorpicker-hue {
+background-image: url(../img/hue.png);
+}
+.colorpicker-alpha {
+background-image: url(../img/alpha.png);
+display: none;
+}
+.colorpicker {
+*zoom: 1;
+top: 0;
+left: 0;
+padding: 4px;
+min-width: 120px;
+margin-top: 1px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.colorpicker:before, .colorpicker:after {
+display: table;
+content: "";
+}
+.colorpicker:after {
+clear: both;
+}
+.colorpicker:before {
+content: '';
+display: inline-block;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;
+border-bottom: 7px solid #ccc;
+border-bottom-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: -7px;
+left: 6px;
+}
+.colorpicker:after {
+content: '';
+display: inline-block;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid #ffffff;
+position: absolute;
+top: -6px;
+left: 7px;
+}
+.colorpicker div {
+position: relative;
+}
+.colorpicker.alpha {
+min-width: 140px;
+}
+.colorpicker.alpha .colorpicker-alpha {
+display: block;
+}
+.colorpicker-color {
+height: 10px;
+margin-top: 5px;
+clear: both;
+background-image: url(../img/alpha.png);
+background-position: 0 100%;
+}
+.colorpicker-color div {
+height: 10px;
+}
+.input-append.color .add-on i, .input-prepend.color .add-on i {
+display: block;
+cursor: pointer;
+width: 16px;
+height: 16px;
+} 
+/*增加的常用颜色样式*/
+.colorpicker-colors{background:none;width:70px;height:100px;float:left;display:inline-block;}
+.colorpicker-colors a.picker_color{display:inline-block;padding:0;border:1px solid transparent;width:18px;height:18px;margin:0;float:left;}
+.colorpicker-colors a.picker_color span{width:14px;height:14px;display:inline-block;margin:2px;} 
+.colorpicker-colors a:hover,.colorpicker-colors a.active{border:1px solid #4686BD;background-color:#E7F0FB;} 
+.colorpicker-colors .colorpicker_style_1{background-color:#ff00ff;}
+.colorpicker-colors .colorpicker_style_2{background-color:#ff66ff;}
+.colorpicker-colors .colorpicker_style_3{background-color:#ffccff;}
+.colorpicker-colors .colorpicker_style_4{background-color:#0000ff;}
+.colorpicker-colors .colorpicker_style_5{background-color:#0099ff;}
+.colorpicker-colors .colorpicker_style_6{background-color:#00ffff;}
+.colorpicker-colors .colorpicker_style_7{background-color:#00ff00;}
+.colorpicker-colors .colorpicker_style_8{background-color:#00ff99;}
+.colorpicker-colors .colorpicker_style_9{background-color:#66ff99;}
+.colorpicker-colors .colorpicker_style_10{background-color:#ffff00;}
+.colorpicker-colors .colorpicker_style_11{background-color:#ffff66;}
+.colorpicker-colors .colorpicker_style_12{background-color:#ffffcc;}
+.colorpicker-colors .colorpicker_style_13{background-color:#ff0000;}
+.colorpicker-colors .colorpicker_style_14{background-color:#ff6600;}
+.colorpicker-colors .colorpicker_style_15{background-color:#f4a20f;}

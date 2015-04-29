@@ -1,0 +1,17 @@
+.file-selector{
+    width:70px;
+    position:relative;
+}
+.file-selector .MultiFile-wrap input[type=file]{
+    position:absolute;
+    left:0;
+    top:0;
+    height: 25px;
+    overflow: hidden;
+    width:90px;
+    padding:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer !important;
+}
+

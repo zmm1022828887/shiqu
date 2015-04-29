@@ -1,0 +1,21 @@
+/* 通用组件layer */
+a.TP_close {display:inline-block;width:16px;height:16px;font-size:16px;text-decoration:none;color: #333333;}
+.TP_layer{position:absolute;border-radius:3px;z-index:999;}
+.TP_layer .bg {padding:3px;border-radius:4px;background:url('../../images/popbox/layer_bg.png') repeat;}
+.TP_layer table {border-collapse:collapse;border-spacing:0;}
+.TP_layer table td{padding:0;}
+.TP_layer .content {height:auto;position:relative;background-color:#fff;border:1px solid #ccc;border-radius:2px;}
+.TP_layer .title {background:#f3f3f3;height:30px;line-height:30px;font-weight:700;padding:0 0 0 15px;font-size:12px;vertical-align:middle;color: #333333;}
+.TP_layer .TP_close {position:absolute;z-index:2;right:10px;top:6px;}
+.TP_layer .arrow{position:absolute;overflow:hidden;display:block;background:url('../../images/popbox/layer_arrow.png') no-repeat;}
+.TP_layer .arrow_r, .TP_layer .arrow_l {width:9px;height:12px;right:-5px;background-position:-8px -25px;top:5px;}
+.TP_layer .arrow_l{left:-5px;background-position:0px -25px;}
+.TP_layer .arrow_t, .TP_layer .arrow_b {width:14px;height:9px;top:-5px;background-position:0 0;}
+.TP_layer .arrow_b {top:auto;bottom:-5px;background-position:0 -8px;}
+.TP_layer .content_inner{min-width:100px;word-break:break-all;word-wrap:break-word;}
+
+.TP_loading, .TP_loading_err{text-align:center;padding:5px 0;}
+.TP_loading span, .TP_loading span.notext, .TP_loading_err span{background:url("../../images/popbox/loading.gif") no-repeat 0 1px;padding:0 0 0 20px;line-height:18px;height:18px;display:inline-block;font-size:12px;}
+.TP_loading span.notext{width:18px;padding:0px;text-indent:-9999em;}
+.TP_loading_err{padding:15px 0;}
+.TP_loading_err span{background:url("../../images/popbox/ico_warn.png") no-repeat 0 -200px;padding:0 0 0 20px;}

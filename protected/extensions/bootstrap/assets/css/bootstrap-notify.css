@@ -1,0 +1,10 @@
+.notifications{position:fixed;height:16px;line-height:16px;}
+.notifications.top-right{right:10px;top:5px;}
+.notifications.top-left{left:10px;top:5px;}
+.notifications.top-center{left:45%;top:5px;}
+.notifications.bottom-left{left:10px;bottom:5px;}
+.notifications.bottom-right{right:10px;bottom:5px;}
+.notifications>div{position:relative;z-index:9999;margin:0;white-space: nowrap; }
+.notifications.center{top:48%;left:0;width:100%;}
+.notifications.center>div{width:20%;text-align:center;}
+.notifications>div i{display: inline-block;margin-right: 5px;}
