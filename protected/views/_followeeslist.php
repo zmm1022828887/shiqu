@@ -54,9 +54,9 @@
                         ?>
                     </div>
                     <div class="details">
-                        <a   href="<?php echo $this->createUrl("/default/userinfo", array("user_id" => $userModel->id, "type" => "followees")); ?>" class="link-gray-normal">关注了 <?php echo $userModel->followees == '' ? 0 : count(explode(",", rtrim($userModel->followees, ","))); ?></a>
+                        <a   href="<?php echo $this->createUrl("/default/userinfo", array("user_id" => $userModel->id, "type" => "followees")); ?>" class="link-gray-normal">关注了 <?php echo $userModel->followees == '' ? 0 : count(explode(",", trim($userModel->followees, ","))); ?></a>
                         /
-                        <a  href="<?php echo $this->createUrl("/default/userinfo", array("user_id" => $userModel->id, "type" => "followers")); ?>" class="link-gray-normal">关注者 <?php echo $userModel->followers == '' ? 0 : count(explode(",", rtrim($userModel->followers, ","))); ?></a>
+                        <a  href="<?php echo $this->createUrl("/default/userinfo", array("user_id" => $userModel->id, "type" => "followers")); ?>" class="link-gray-normal">关注者 <?php echo $userModel->followers == '' ? 0 : count(explode(",", trim($userModel->followers, ","))); ?></a>
                         /
                         <a href="<?php echo $this->createUrl("/default/userinfo", array("user_id" => $userModel->id, "type" => "article")); ?>" class="link-gray-normal">文章 <?php echo Article::model()->count("create_user=:create_user", array(":create_user" => $userModel->id)); ?></a>
                         /
