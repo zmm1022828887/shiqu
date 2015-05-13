@@ -1621,8 +1621,10 @@ class DefaultController extends MController {
         if (isset($_POST["user_id"])) {
             $userId = $_POST["user_id"];
             $loginUser = Yii::app()->user->id;
-            $followees = User::model()->findByPk($loginUser)->followees;
-            $otherfollowers = User::model()->findByPk($userId)->followers;
+            $loginUserModel = User::model()->findByPk($loginUser);
+            $toUserModel = User::model()->findByPk($userId);
+            $followees = $loginUserModel->followees;
+            $otherfollowers = $toUserModel->followers;
             $otherfolloweesArray = explode(",", trim($otherfollowers, ","));
             if (in_array($loginUser, $otherfolloweesArray)) {
                 $otherfollowersString = ",";
@@ -1635,12 +1637,13 @@ class DefaultController extends MController {
             } else {
                 $followers = ($otherfollowers == "") ? "," . $loginUser . "," : $otherfollowers . $loginUser . ",";
             }
-            User::model()->updateByPk($userId, array("followers" => $followers));
+           
             if (in_array($loginUser, explode(",", User::model()->findByPk($userId)->block_users))) {
                 echo "FAILE";
             } else if ($userId == Yii::app()->user->id) {
                 echo "DENGER";
             } else {
+                 User::model()->updateByPk($userId, array("followers" => $followers));
                 $followeesArray = explode(",", trim($followees, ","));
                 if (in_array($userId, $followeesArray)) {
                     $followersString = ",";
@@ -1649,14 +1652,13 @@ class DefaultController extends MController {
                             $followeesString .= $followeesArray[$i] . ",";
                         }
                     }
-                    $model = $this->loadModelUser($loginUser);
-                    $model->followees = $followeesString == "," ? "" : $followeesString;
+                    $followees = $followeesString == "," ? "" : $followeesString;
+                    User::model()->updateByPk($loginUser, array("followees" => $followees));
                     $model->save();
                     echo "立即关注";
                 } else {
-                    $model = $this->loadModelUser($loginUser);
-                    $model->followees = ($model->followees == "") ? "," . $userId . "," : $model->followees . $userId . ",";
-                    $model->save();
+                    $followees = ($loginUserModel->followees == "") ? "," . $userId . "," : $loginUserModel->followees . $userId . ",";
+                   User::model()->updateByPk($loginUser, array("followees" => $followees));
                     echo "取消关注";
                 }
 
