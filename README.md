@@ -5,7 +5,7 @@
 网址： http://www.shiqu.sinaapp.com/index.php
 注意：此网站是最新代码，而此软件包是老程序
 
-软件环境：yii1.0+bootstrap
+软件环境：yii1.1+bootstrap
 
 功能：页面主要操作知乎，可以提问和发布文章等等.
 
